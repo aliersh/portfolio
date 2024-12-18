@@ -1,10 +1,11 @@
 ---
 import "@/styles/globals.css";
 import Layout from "@/layouts/Layout.astro";
+import ProfileAvatar from "@/components/ProfileAvatar";
 ---
 
 <Layout>
     <main>
-        <h1>Hello World</h1>
+        <ProfileAvatar client:load />
     </main>
 </Layout>
