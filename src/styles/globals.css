@@ -64,7 +64,7 @@
         @apply bg-background text-foreground mx-auto;
     }
     main {
-        @apply max-w-screen-md;
+        @apply max-w-screen-sm;
         @apply pt-20;
         @apply mx-auto;
     }
