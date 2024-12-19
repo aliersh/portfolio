@@ -2,10 +2,12 @@
 import "@/styles/globals.css";
 import Layout from "@/layouts/Layout.astro";
 import ProfileAvatar from "@/components/ProfileAvatar";
+import Bio from "@/components/Bio.astro";
 ---
 
 <Layout>
     <main>
         <ProfileAvatar client:load />
+        <Bio />
     </main>
 </Layout>
