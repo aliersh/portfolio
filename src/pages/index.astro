@@ -3,11 +3,13 @@ import "@/styles/globals.css";
 import Layout from "@/layouts/Layout.astro";
 import ProfileAvatar from "@/components/ProfileAvatar";
 import Bio from "@/components/Bio.astro";
+import SocialButtons from "@/components/SocialButtons";
 ---
 
 <Layout>
     <main>
         <ProfileAvatar client:load />
         <Bio />
+        <SocialButtons />
     </main>
 </Layout>
