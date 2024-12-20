@@ -28,7 +28,7 @@ const SocialButtons = () => {
     ];
 
     return (
-        <div className="flex gap-2">
+        <div className="flex gap-2 mb-8">
             {socialLinks.map((link) => (
                 <Button
                     variant="outline"
