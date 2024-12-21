@@ -1,11 +1,63 @@
 ---
-import ProjectCard from "@/components/ProjectCard";
+import ProjectCard from "./ProjectCard";
+import { FaBootstrap, FaSass, FaBoxOpen } from "react-icons/fa";
+import { RiNextjsFill } from "react-icons/ri";
+import { SiMedusa } from "react-icons/si";
+
+import fernandoImage from "@/assets/fernando.png";
+import verduImage from "@/assets/verdu.png";
 ---
 
-<article class="space-y-4 mb-16">
-    <h2 class="text-md font-bold font-khula">Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <ProjectCard />
-        <ProjectCard />
+<section class="mb-8">
+    <h2 class="text-md font-bold font-khula text-gray-800 mb-4">
+        Projects
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center">
+        <ProjectCard
+            title="Fernando Ratkoczy Webpage"
+            description="One-page website for Fernando Ratkoczy, a career coach, designed to showcase his services and facilitate client engagement. Built with Bootstrap for responsive design and SCSS for styling, bundled with Parcel."
+            imageSrc={fernandoImage.src}
+            imageAlt="Fernando"
+            projectUrl="https://fernandoratkoczy.com"
+            githubUrl="https://github.com/aliersh/fernando-ratkoczy"
+            technologies={[
+                {
+                    Icon: FaBootstrap,
+                    href: "https://getbootstrap.com",
+                    hoverColor: "#7e22ce",
+                },
+                {
+                    Icon: FaSass,
+                    href: "https://sass-lang.com",
+                    hoverColor: "#db2777",
+                },
+                {
+                    Icon: FaBoxOpen,
+                    href: "https://parceljs.org",
+                    hoverColor: "#eab308",
+                },
+            ]}
+        />
+
+        <ProjectCard
+            title="Verdudelivery"
+            description="Verdudelivery is a modern e-commerce platform built with Next.js and Medusa.js, designed to provide a seamless shopping experience for fresh produce delivery. This project showcases the implementation of modern web technologies and best practices in building a scalable e-commerce solution."
+            imageSrc={verduImage.src}
+            imageAlt="Verdu"
+            projectUrl="/"
+            githubUrl="https://github.com/aliersh/verdudelivery"
+            technologies={[
+                {
+                    Icon: RiNextjsFill,
+                    href: "https://nextjs.org",
+                    hoverColor: "#000000",
+                },
+                {
+                    Icon: SiMedusa,
+                    href: "https://medusajs.com",
+                    hoverColor: "#27272a",
+                },
+            ]}
+        />
     </div>
-</article>
+</section>
