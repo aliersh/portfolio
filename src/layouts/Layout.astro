@@ -1,16 +1,53 @@
 ---
 import "@fontsource-variable/montserrat";
 import "@fontsource/khula";
+
+interface Props {
+    title?: string;
+    description?: string;
+    keywords?: string;
+}
+
+const {
+    title = "Ariel Diaz - Web Developer Portfolio",
+    description = "Ariel Diaz: A web developer specializing in modern web technologies like React, Next.js, and Astro. Explore my projects and professional journey.",
+    keywords = "web developer, React, Next.js, Astro, frontend development, portfolio",
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
+        <meta name="author" content="Ariel Diaz" />
+        <!-- TODO: Add canonical URL -->
+        <link rel="canonical" href="https://your-portfolio-domain.com" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <!-- TODO: Add Open Graph url -->
+        <meta property="og:url" content="https://your-portfolio-domain.com" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="/og-image.jpg" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <!-- TODO: Add Twitter url -->
+        <meta
+            property="twitter:url"
+            content="https://your-portfolio-domain.com"
+        />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content="/og-image.jpg" />
+
         <meta name="generator" content={Astro.generator} />
-        <title>Ariel Diaz's Portfolio</title>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     </head>
     <body>
         <slot />
