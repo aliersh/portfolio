@@ -28,21 +28,30 @@ const SocialButtons = () => {
     ];
 
     return (
-        <div className="flex gap-2 mb-8">
-            {socialLinks.map((link) => (
-                <Button
-                    variant="outline"
-                    className="flex items-center gap-2 border-muted text-muted-foreground group"
-                    asChild
-                >
-                    <a href={link.href}>
-                        {link.icon}
-                        <span className="text-sm">{link.label}</span>
-                        <GoArrowUpRight className="transition-transform group-hover:rotate-45" />
-                    </a>
-                </Button>
-            ))}
-        </div>
+        <section>
+            <h2 className="text-md font-bold font-khula text-gray-800 mb-4">Connect</h2>
+            <div className="flex gap-2 mb-8">
+                {socialLinks.map((link, index) => (
+                    <Button
+                        key={index}
+                        variant="outline"
+                        className="flex items-center gap-2 border-muted text-muted-foreground group bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                        asChild
+                    >
+                        <a 
+                            href={link.href} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2"
+                        >
+                            {link.icon}
+                            <span className="text-sm">{link.label}</span>
+                            <GoArrowUpRight className="transition-transform group-hover:rotate-45" />
+                        </a>
+                    </Button>
+                ))}
+            </div>
+        </section>
     );
 };
 
