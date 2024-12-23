@@ -8,12 +8,13 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { FaGithub } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
+import TechIcon from "./TechIcon";
 
 // Define a type for technology icons
 type TechIcon = {
     Icon: React.ComponentType<{ className?: string }>;
+    name: string;
     href: string;
-    hoverColor: string;
 };
 
 // Define the project card props
@@ -60,29 +61,14 @@ const ProjectCard = ({
             </CardContent>
             <CardFooter className="flex justify-between items-center mt-auto">
                 <div className="flex gap-2">
-                    {technologies.map(({ Icon, href, hoverColor }, index) => {
-                        const hoverColorClass =
-                            {
-                                "#7e22ce": "hover:text-purple-600",
-                                "#db2777": "hover:text-pink-600",
-                                "#eab308": "hover:text-yellow-500",
-                                "#000000": "hover:text-black",
-                                "#27272a": "hover:text-gray-800",
-                            }[hoverColor] || "hover:text-gray-800";
-
-                        return (
-                            <a
-                                key={index}
-                                href={href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <Icon
-                                    className={`text-gray-400 ${hoverColorClass} text-2xl`}
-                                />
-                            </a>
-                        );
-                    })}
+                    {technologies.map(({ Icon, name, href }, index) => (
+                        <TechIcon 
+                            key={index} 
+                            Icon={Icon} 
+                            name={name} 
+                            href={href} 
+                        />
+                    ))}
                 </div>
                 <div className="flex gap-2 items-center">
                     <a

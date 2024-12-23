@@ -1,8 +1,6 @@
 ---
 import ProjectCard from "./ProjectCard";
-import { FaBootstrap, FaSass, FaBoxOpen } from "react-icons/fa";
-import { RiNextjsFill } from "react-icons/ri";
-import { SiMedusa } from "react-icons/si";
+import { technologies } from "@/data/technologies";
 
 import fernandoImage from "@/assets/fernando.png";
 import verduImage from "@/assets/verdu.png";
@@ -15,27 +13,14 @@ import verduImage from "@/assets/verdu.png";
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center">
         <ProjectCard
             title="Fernando Ratkoczy Webpage"
-            description="Responsive one-page website built with Bootstrap and SCSS, designed to showcase Fernando Ratkoczy’s career coaching services and streamline client engagement."
+            description="Responsive one-page website built with Bootstrap and SCSS, designed to showcase Fernando Ratkoczy's career coaching services and streamline client engagement."
             imageSrc={fernandoImage.src}
             imageAlt="Fernando"
             projectUrl="https://fernandoratkoczy.com"
             githubUrl="https://github.com/aliersh/fernando-ratkoczy"
             technologies={[
-                {
-                    Icon: FaBootstrap,
-                    href: "https://getbootstrap.com",
-                    hoverColor: "#7e22ce",
-                },
-                {
-                    Icon: FaSass,
-                    href: "https://sass-lang.com",
-                    hoverColor: "#db2777",
-                },
-                {
-                    Icon: FaBoxOpen,
-                    href: "https://parceljs.org",
-                    hoverColor: "#eab308",
-                },
+                technologies.bootstrap,
+                technologies.sass
             ]}
         />
 
@@ -47,16 +32,8 @@ import verduImage from "@/assets/verdu.png";
             projectUrl="/"
             githubUrl="https://github.com/aliersh/verdudelivery"
             technologies={[
-                {
-                    Icon: RiNextjsFill,
-                    href: "https://nextjs.org",
-                    hoverColor: "#000000",
-                },
-                {
-                    Icon: SiMedusa,
-                    href: "https://medusajs.com",
-                    hoverColor: "#27272a",
-                },
+                technologies.nextjs,
+                technologies.medusa
             ]}
         />
     </div>
