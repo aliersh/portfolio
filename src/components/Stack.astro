@@ -1,0 +1,27 @@
+---
+import { technologies } from "@/data/technologies";
+import TechIcon from "./TechIcon";
+
+const stackTechnologies = [
+    technologies.typescript,
+    technologies.react,
+    technologies.tailwind,
+    technologies.nextjs,
+    technologies.astro,
+];
+---
+
+<section class="mb-8">
+    <h2 class="text-md font-bold font-khula text-gray-800 mb-4">
+        Tech Stack
+    </h2>
+    <div class="flex gap-4 items-center justify-start">
+        {stackTechnologies.map((tech) => (
+            <TechIcon 
+                Icon={tech.Icon} 
+                name={tech.name} 
+                href={tech.href} 
+            />
+        ))}
+    </div>
+</section> 
