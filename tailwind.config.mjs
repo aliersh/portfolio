@@ -54,6 +54,7 @@ export default {
             fontFamily: {
                 montserrat: ["Montserrat Variable", "sans-serif"],
                 khula: ["Khula", "sans-serif"],
+                qwitcher: ["Qwitcher Grypen", "sans-serif"],
             },
         },
     },
