@@ -69,4 +69,13 @@
         @apply pt-20;
         @apply mx-auto;
     }
+    /* Add styles for headings in dark mode */
+    .dark h1,
+    .dark h2,
+    .dark h3,
+    .dark h4,
+    .dark h5,
+    .dark h6 {
+        @apply text-gray-100;
+    }
 }

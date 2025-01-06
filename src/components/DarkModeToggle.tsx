@@ -1,6 +1,4 @@
-import { FaRegSun, FaRegMoon } from "react-icons/fa";
 import { useEffect, useState } from "react";
-
 import { Toggle } from "./ui/toggle";
 
 const DarkModeToggle = () => {
@@ -22,9 +20,10 @@ const DarkModeToggle = () => {
         <Toggle
             pressed={isDark}
             onPressedChange={toggleDarkMode}
-            className="fixed top-4 right-4"
+            className="absolute top-24 right-0 z-10 text-sm font-bold font-khula hover:no-underline"
+            variant="link"
         >
-            {isDark ? <FaRegSun /> : <FaRegMoon />}
+            {isDark ? "lights on" : "lights off"}
         </Toggle>
     );
 }

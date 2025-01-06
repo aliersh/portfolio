@@ -38,7 +38,7 @@ const ProjectCard = ({
     technologies,
 }: ProjectCardProps) => {
     return (
-        <Card className="w-full max-w-sm bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
+        <Card className="w-full max-w-sm bg-background rounded-lg shadow-md overflow-hidden flex flex-col h-full border-border">
             <a
                 href={projectUrl}
                 target="_blank"
@@ -52,7 +52,7 @@ const ProjectCard = ({
                 />
             </a>
             <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-bold font-khula text-gray-800">
+                <CardTitle className="text-sm font-bold font-khula text-foreground">
                     {title}
                 </CardTitle>
             </CardHeader>
@@ -76,7 +76,7 @@ const ProjectCard = ({
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <FaGithub className="text-gray-400 hover:text-gray-800 text-2xl" />
+                        <FaGithub className="text-muted-foreground hover:text-foreground text-2xl transition-colors" />
                     </a>
                     <Separator orientation="vertical" className="h-8" />
                     <a
@@ -85,7 +85,7 @@ const ProjectCard = ({
                         rel="noopener noreferrer"
                         className="flex gap-2 items-center"
                     >
-                        <GoArrowUpRight className="text-2xl text-gray-400 transition-transform hover:rotate-45 hover:text-gray-800" />
+                        <GoArrowUpRight className="text-2xl text-muted-foreground transition-all hover:rotate-45 hover:text-foreground" />
                     </a>
                 </div>
             </CardFooter>

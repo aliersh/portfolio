@@ -35,7 +35,7 @@ const SocialButtons = () => {
                     <Button
                         key={index}
                         variant="outline"
-                        className="flex items-center gap-2 border-muted text-muted-foreground group bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                        className="flex items-center gap-2 bg-background border-border text-foreground hover:bg-accent hover:text-accent-foreground dark:border-gray-700 rounded-lg shadow-sm hover:shadow-md transition-all"
                         asChild
                     >
                         <a 
