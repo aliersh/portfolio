@@ -13,6 +13,23 @@ const {
     description = "Ariel Diaz: A web developer specializing in modern web technologies like React, Next.js, and Astro. Explore my projects and professional journey.",
     keywords = "web developer, React, Next.js, Astro, frontend development, portfolio",
 } = Astro.props;
+
+// Add script for dark mode initialization
+const darkModeScript = `
+  let theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme');
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark';
+    }
+    return 'light';
+  })();
+  
+  if (theme === 'dark') {
+    document.documentElement.classList.add('dark');
+  }
+`;
 ---
 
 <!doctype html>
@@ -48,8 +65,9 @@ const {
 
         <meta name="generator" content={Astro.generator} />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <script set:html={darkModeScript} />
     </head>
-    <body>
+    <body class="transition-colors duration-300 dark:bg-gray-900 dark:text-white">
         <slot />
     </body>
 </html>
