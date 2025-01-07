@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 type TechIconProps = {
     Icon: React.ComponentType<{ className?: string }>;
@@ -16,19 +16,16 @@ const TechIcon: React.FC<TechIconProps> = ({ Icon, name, href }) => {
         React: "text-gray-400 hover:text-blue-400",
         "Tailwind CSS": "text-gray-400 hover:text-teal-500",
         TypeScript: "text-gray-400 hover:text-blue-600",
-        Astro: "text-gray-400 hover:text-purple-500"
+        Astro: "text-gray-400 hover:text-indigo-600",
     };
 
     return (
-        <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            title={name}
-        >
-            <Icon className={`${hoverColorMap[name]} text-2xl transition-colors`} />
+        <a href={href} target="_blank" rel="noopener noreferrer" title={name}>
+            <Icon
+                className={`${hoverColorMap[name]} text-2xl transition-colors`}
+            />
         </a>
     );
 };
 
-export default TechIcon; 
+export default TechIcon;

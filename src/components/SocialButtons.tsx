@@ -1,6 +1,7 @@
-import { Button } from "./ui/button";
-import { FaEnvelope, FaLinkedinIn, FaGithub } from "react-icons/fa6";
+import { FaEnvelope, FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { GoArrowUpRight } from "react-icons/go";
+
+import { Button } from "./ui/button";
 
 interface SocialLink {
     href: string;
@@ -29,18 +30,20 @@ const SocialButtons = () => {
 
     return (
         <section>
-            <h2 className="text-md font-bold font-khula text-gray-800 mb-4">Connect</h2>
+            <h2 className="mb-4 font-bold text-gray-800 text-md font-khula">
+                Connect
+            </h2>
             <div className="flex gap-2 mb-8">
                 {socialLinks.map((link, index) => (
                     <Button
                         key={index}
                         variant="outline"
-                        className="flex items-center gap-2 bg-background border-border text-foreground hover:bg-accent hover:text-accent-foreground dark:border-gray-700 rounded-lg shadow-sm hover:shadow-md transition-all"
+                        className="flex items-center gap-2 text-gray-500 transition-all rounded-lg shadow-sm group bg-background border-border hover:bg-accent hover:text-accent-foreground dark:border-gray-700 dark:text-gray-400 hover:shadow-md"
                         asChild
                     >
-                        <a 
-                            href={link.href} 
-                            target="_blank" 
+                        <a
+                            href={link.href}
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-2"
                         >
