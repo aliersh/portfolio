@@ -30,25 +30,25 @@ const SocialButtons = () => {
 
     return (
         <section>
-            <h2 className="mb-4 font-bold text-gray-800 text-md font-khula">
+            <h2 className="mb-3 sm:mb-4 font-bold text-gray-800 text-md font-khula">
                 Connect
             </h2>
-            <div className="flex gap-2 mb-8">
+            <div className="flex flex-wrap gap-2 mb-6 sm:mb-8">
                 {socialLinks.map((link, index) => (
                     <Button
                         key={index}
                         variant="outline"
-                        className="flex items-center gap-2 text-gray-500 transition-all rounded-lg shadow-sm group bg-background border-border hover:bg-accent hover:text-accent-foreground dark:border-gray-700 dark:text-gray-400 hover:shadow-md"
+                        className="flex items-center gap-1 sm:gap-2 text-gray-500 transition-all rounded-lg shadow-sm group bg-background border-border hover:bg-accent hover:text-accent-foreground dark:border-gray-700 dark:text-gray-400 hover:shadow-md"
                         asChild
                     >
                         <a
                             href={link.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-2"
+                            className="flex items-center gap-1 sm:gap-2"
                         >
                             {link.icon}
-                            <span className="text-sm">{link.label}</span>
+                            <span className="text-xs sm:text-sm">{link.label}</span>
                             <GoArrowUpRight className="transition-transform group-hover:rotate-45" />
                         </a>
                     </Button>

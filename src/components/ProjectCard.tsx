@@ -37,7 +37,7 @@ const ProjectCard = ({
     status,
 }: ProjectCardProps) => {
     return (
-        <Card className="flex flex-col w-full h-full max-w-sm overflow-hidden rounded-lg shadow-md bg-background border-border">
+        <Card className="flex flex-col w-full h-full max-w-full sm:max-w-sm overflow-hidden rounded-lg shadow-md bg-background border-border">
             <a
                 href={projectUrl}
                 target="_blank"
@@ -63,10 +63,10 @@ const ProjectCard = ({
                     {title}
                 </CardTitle>
             </CardHeader>
-            <CardContent className="flex-grow text-sm text-muted-foreground font-khula">
+            <CardContent className="flex-grow text-xs sm:text-sm text-muted-foreground font-khula">
                 <p>{description}</p>
             </CardContent>
-            <CardFooter className="flex items-center justify-between mt-auto">
+            <CardFooter className="flex items-center justify-between mt-auto p-4 sm:p-6">
                 <div className="flex gap-2">
                     {technologies.map(({ Icon, name, href }, index) => (
                         <TechIcon

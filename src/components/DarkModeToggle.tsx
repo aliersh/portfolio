@@ -20,7 +20,7 @@ const DarkModeToggle = () => {
         <Toggle
             pressed={isDark}
             onPressedChange={toggleDarkMode}
-            className="absolute top-24 right-0 z-10 text-sm font-bold font-khula hover:no-underline"
+            className="absolute top-16 sm:top-24 right-0 z-10 text-xs sm:text-sm font-bold font-khula hover:no-underline"
             variant="link"
         >
             {isDark ? "lights on" : "lights off"}
