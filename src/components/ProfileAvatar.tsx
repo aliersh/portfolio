@@ -1,5 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import profileAvatar from "@/assets/ad-profile.jpg";
+import profileAvatar from "@/assets/ad-profile.webp";
 
 const ProfileAvatar: React.FC = () => {
     return (
