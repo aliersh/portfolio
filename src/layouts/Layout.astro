@@ -2,6 +2,7 @@
 import "@fontsource-variable/montserrat";
 import "@fontsource/khula";
 import "@fontsource/qwitcher-grypen";
+
 interface Props {
     title?: string;
     description?: string;
@@ -14,7 +15,6 @@ const {
     keywords = "web developer, React, Next.js, Astro, frontend development, portfolio",
 } = Astro.props;
 
-// Add script for dark mode initialization
 const darkModeScript = `
   let theme = (() => {
     if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
@@ -64,10 +64,19 @@ const darkModeScript = `
         <meta property="twitter:image" content="/og-image.jpg" />
 
         <meta name="generator" content={Astro.generator} />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link
+            rel="icon"
+            type="image/png"
+            href="/public/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+        <link rel="shortcut icon" href="/public/favicon.ico" />
         <script set:html={darkModeScript} />
     </head>
-    <body class="transition-colors duration-300 dark:bg-gray-900 dark:text-white">
+    <body
+        class="transition-colors duration-300 dark:bg-gray-900 dark:text-white"
+    >
         <slot />
     </body>
 </html>
