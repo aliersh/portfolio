@@ -2,7 +2,7 @@
 import "@fontsource-variable/montserrat";
 import "@fontsource/khula";
 import "@fontsource/qwitcher-grypen";
-import SEO from '../components/SEO.astro';
+import SEO from "../components/SEO.astro";
 
 interface Props {
     title?: string;
@@ -13,7 +13,6 @@ interface Props {
 const {
     title = "Ariel Diaz - Web Developer Portfolio",
     description = "Ariel Diaz: A web developer specializing in modern web technologies like React, Next.js, and Astro. Explore my projects and professional journey.",
-    keywords = "web developer, React, Next.js, Astro, frontend development, portfolio",
 } = Astro.props;
 
 const darkModeScript = `
@@ -38,10 +37,7 @@ const darkModeScript = `
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <SEO 
-            title={title}
-            description={description}
-        />
+        <SEO title={title} description={description} />
 
         <!-- Generator -->
         <meta name="generator" content={Astro.generator} />
@@ -50,17 +46,19 @@ const darkModeScript = `
         <link
             rel="icon"
             type="image/png"
-            href="/public/favicon-96x96.png"
+            href="/favicon-96x96.png"
             sizes="96x96"
         />
-        <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
-        <link rel="shortcut icon" href="/public/favicon.ico" />
-        
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+
         <script set:html={darkModeScript} />
     </head>
     <body
         class="transition-colors duration-300 dark:bg-gray-900 dark:text-white"
     >
-        <slot />
+        <main id="main-content">
+            <slot />
+        </main>
     </body>
 </html>
