@@ -2,6 +2,7 @@
 import "@fontsource-variable/montserrat";
 import "@fontsource/khula";
 import "@fontsource/qwitcher-grypen";
+import SEO from '../components/SEO.astro';
 
 interface Props {
     title?: string;
@@ -37,25 +38,10 @@ const darkModeScript = `
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-        <meta name="author" content="Ariel Diaz" />
-        <link rel="canonical" href="arieldiaz.dev" />
-
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="arieldiaz.dev" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content="/og-image.jpg" />
-
-        <!-- Twitter -->
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="arieldiaz.dev" />
-        <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content="/public/favicon-96x96.png" />
+        <SEO 
+            title={title}
+            description={description}
+        />
 
         <!-- Generator -->
         <meta name="generator" content={Astro.generator} />

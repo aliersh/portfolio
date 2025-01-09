@@ -1,0 +1,65 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    image?: string;
+    article?: boolean;
+}
+
+const {
+    title,
+    description,
+    image = "/assets/ad-profile.webp",
+    article = false,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!-- Essential Meta Tags -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={article ? "article" : "website"} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.site)} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image, Astro.site)} />
+
+<!-- Developer-specific Meta Tags -->
+<meta
+    name="keywords"
+    content="web developer, React, Next.js, Astro, frontend development, portfolio"
+/>
+<meta name="author" content="Ariel Diaz" />
+<meta name="robots" content="index, follow" />
+
+<link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+
+<!-- JSON-LD for Rich Results -->
+<script
+    type="application/ld+json"
+    set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "mainEntity": {
+            "@type": "Person",
+            name: "Ariel Diaz",
+            url: Astro.site,
+            jobTitle: "Web Developer",
+            sameAs: [
+                "https://github.com/aliersh",
+                "https://linkedin.com/in/arielidiaz",
+            ],
+        },
+    })}
+/>
