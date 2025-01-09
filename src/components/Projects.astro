@@ -6,28 +6,44 @@ import fernandoImage from "@/assets/fernando.webp";
 import verduImage from "@/assets/verdu.webp";
 ---
 
-<section class="mb-6 sm:mb-8">
-    <h2 class="mb-3 sm:mb-4 font-bold text-gray-800 text-md font-khula">Projects</h2>
-    <div class="grid justify-center grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2 md:max-w-3xl md:mx-auto">
-        <ProjectCard
-            title="Fernando Ratkoczy Webpage"
-            description="Responsive one-page website built with Bootstrap and SCSS, designed to showcase Fernando Ratkoczy's career coaching services and streamline client engagement."
-            imageSrc={fernandoImage.src}
-            imageAlt="Fernando"
-            projectUrl="https://fernandoratkoczy.com"
-            githubUrl="https://github.com/aliersh/fernando_ratkoczy"
-            technologies={[technologies.bootstrap, technologies.sass]}
-        />
+<section 
+    class="mb-6 sm:mb-8" 
+    aria-labelledby="projects-heading"
+>
+    <h2 
+        id="projects-heading" 
+        class="mb-3 font-bold text-gray-900 sm:mb-4 dark:text-gray-100 text-md font-khula"
+    >
+        Projects
+    </h2>
+    <ul
+        class="grid justify-center grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2 md:max-w-3xl md:mx-auto"
+        role="list"
+        aria-label="Project showcase"
+    >
+        <li>
+            <ProjectCard
+                title="Fernando Ratkoczy Webpage"
+                description="Responsive one-page website built with Bootstrap and SCSS, designed to showcase Fernando Ratkoczy's career coaching services and streamline client engagement."
+                imageSrc={fernandoImage.src}
+                imageAlt="Screenshot of Fernando Ratkoczy's career coaching website"
+                projectUrl="https://fernandoratkoczy.com"
+                githubUrl="https://github.com/aliersh/fernando_ratkoczy"
+                technologies={[technologies.bootstrap, technologies.sass]}
+            />
+        </li>
 
-        <ProjectCard
-            title="Verdudelivery"
-            description="Modern e-commerce platform built with Next.js and Medusa.js, designed to provide a seamless shopping experience for fresh produce delivery."
-            imageSrc={verduImage.src}
-            imageAlt="Verdu"
-            projectUrl="/"
-            githubUrl="https://github.com/aliersh/verdudelivery"
-            technologies={[technologies.nextjs, technologies.medusa]}
-            status="in-progress"
-        />
-    </div>
+        <li>
+            <ProjectCard
+                title="Verdudelivery"
+                description="Modern e-commerce platform built with Next.js and Medusa.js, designed to provide a seamless shopping experience for fresh produce delivery."
+                imageSrc={verduImage.src}
+                imageAlt="Screenshot of Verdudelivery e-commerce platform interface"
+                projectUrl="/"
+                githubUrl="https://github.com/aliersh/verdudelivery"
+                technologies={[technologies.nextjs, technologies.medusa]}
+                status="in-progress"
+            />
+        </li>
+    </ul>
 </section>

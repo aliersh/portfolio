@@ -22,6 +22,7 @@ const DarkModeToggle = () => {
             onPressedChange={toggleDarkMode}
             className="absolute top-16 sm:top-24 right-0 z-10 text-xs sm:text-sm font-bold font-khula hover:no-underline"
             variant="link"
+            aria-label={isDark ? "Lights on" : "Lights off"}
         >
             {isDark ? "lights on" : "lights off"}
         </Toggle>

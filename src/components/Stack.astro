@@ -11,17 +11,26 @@ const stackTechnologies = [
 ];
 ---
 
-<section class="mb-8">
-    <h2 class="text-md font-bold font-khula text-gray-800 mb-4">
+<section class="mb-8" aria-labelledby="tech-stack-heading">
+    <h2 
+        id="tech-stack-heading" 
+        class="text-md font-bold font-khula text-gray-800 mb-4"
+    >
         Tech Stack
     </h2>
-    <div class="flex gap-4 items-center justify-start">
+    <div 
+        class="flex gap-4 items-center justify-start"
+        role="list"
+        aria-label="Technologies I work with"
+    >
         {stackTechnologies.map((tech) => (
-            <TechIcon 
-                Icon={tech.Icon} 
-                name={tech.name} 
-                href={tech.href} 
-            />
+            <div role="listitem">
+                <TechIcon 
+                    Icon={tech.Icon} 
+                    name={tech.name} 
+                    href={tech.href} 
+                />
+            </div>
         ))}
     </div>
 </section> 

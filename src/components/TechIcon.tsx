@@ -20,9 +20,16 @@ const TechIcon: React.FC<TechIconProps> = ({ Icon, name, href }) => {
     };
 
     return (
-        <a href={href} target="_blank" rel="noopener noreferrer" title={name}>
+        <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={name}
+            aria-label={name}
+        >
             <Icon
                 className={`${hoverColorMap[name]} text-2xl transition-colors`}
+                aria-hidden="true"
             />
         </a>
     );

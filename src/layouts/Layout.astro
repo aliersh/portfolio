@@ -41,29 +41,26 @@ const darkModeScript = `
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <meta name="author" content="Ariel Diaz" />
-        <!-- TODO: Add canonical URL -->
-        <link rel="canonical" href="https://your-portfolio-domain.com" />
+        <link rel="canonical" href="arieldiaz.dev" />
 
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website" />
-        <!-- TODO: Add Open Graph url -->
-        <meta property="og:url" content="https://your-portfolio-domain.com" />
+        <meta property="og:url" content="arieldiaz.dev" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content="/og-image.jpg" />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
-        <!-- TODO: Add Twitter url -->
-        <meta
-            property="twitter:url"
-            content="https://your-portfolio-domain.com"
-        />
+        <meta property="twitter:url" content="arieldiaz.dev" />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
-        <meta property="twitter:image" content="/og-image.jpg" />
+        <meta property="twitter:image" content="/public/favicon-96x96.png" />
 
+        <!-- Generator -->
         <meta name="generator" content={Astro.generator} />
+
+        <!-- Favicons -->
         <link
             rel="icon"
             type="image/png"
@@ -72,6 +69,7 @@ const darkModeScript = `
         />
         <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
         <link rel="shortcut icon" href="/public/favicon.ico" />
+        
         <script set:html={darkModeScript} />
     </head>
     <body
