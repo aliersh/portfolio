@@ -6,25 +6,8 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Separator } from "@/components/ui/separator";
 
 import TechIcon from "./TechIcon";
+import type { ProjectCardProps } from "@/types/projects";
 
-// Define a type for technology icons
-type TechIcon = {
-    Icon: React.ComponentType<{ className?: string }>;
-    name: string;
-    href: string;
-};
-
-// Define the project card props
-type ProjectCardProps = {
-    title: string;
-    description: string;
-    imageSrc: string;
-    imageAlt: string;
-    projectUrl: string;
-    githubUrl: string;
-    technologies: TechIcon[];
-    status?: "in-progress";
-};
 
 const ProjectCard = ({
     title,

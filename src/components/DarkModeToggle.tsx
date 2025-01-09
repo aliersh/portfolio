@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Toggle } from "./ui/toggle";
 
-const DarkModeToggle = () => {
-    const [isDark, setIsDark] = useState(false);
+const DarkModeToggle: React.FC = () => {
+    const [isDark, setIsDark] = useState<boolean>(false);
 
     useEffect(() => {
         const isDarkMode = document.documentElement.classList.contains("dark");
@@ -20,7 +20,7 @@ const DarkModeToggle = () => {
         <Toggle
             pressed={isDark}
             onPressedChange={toggleDarkMode}
-            className="absolute top-16 sm:top-24 right-0 z-10 text-xs sm:text-sm font-bold font-khula hover:no-underline"
+            className="absolute right-0 z-10 text-xs font-bold top-16 sm:top-24 sm:text-sm font-khula hover:no-underline"
             variant="link"
             aria-label={isDark ? "Lights on" : "Lights off"}
         >

@@ -2,13 +2,7 @@ import { FaEnvelope, FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { GoArrowUpRight } from "react-icons/go";
 
 import { Button } from "./ui/button";
-
-interface SocialLink {
-    href: string;
-    icon: React.ReactNode;
-    label: string;
-    ariaLabel: string;
-}
+import type { SocialLink } from "@/types/social";
 
 const SocialButtons = () => {
     const socialLinks: SocialLink[] = [
@@ -36,7 +30,7 @@ const SocialButtons = () => {
         <section aria-labelledby="connect-heading">
             <h2
                 id="connect-heading"
-                className="mb-3 sm:mb-4 font-bold text-gray-800 text-md font-khula"
+                className="mb-3 font-bold text-gray-800 sm:mb-4 text-md font-khula"
             >
                 Connect
             </h2>
@@ -49,7 +43,7 @@ const SocialButtons = () => {
                         <Button
                             key={index}
                             variant="outline"
-                        className="flex items-center gap-1 sm:gap-2 text-gray-500 transition-all rounded-lg shadow-sm group bg-background border-border hover:bg-accent hover:text-accent-foreground dark:border-gray-700 dark:text-gray-400 hover:shadow-md"
+                        className="flex items-center gap-1 text-gray-500 transition-all rounded-lg shadow-sm sm:gap-2 group bg-background border-border hover:bg-accent hover:text-accent-foreground dark:border-gray-700 dark:text-gray-400 hover:shadow-md"
                         asChild
                     >
                         <a
